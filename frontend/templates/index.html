@@ -17,7 +17,7 @@
             align-items: center;
         }
     </style>
-    <script type="text/javascript" src="static/webcam.min.js"></script>
+    <script type="text/javascript" src="../static/webcam.min.js"></script>
 </head>
 
 <body>
@@ -25,15 +25,18 @@
     <div id="results">Your captured image will appear here</div>
     
     <div id="my_camera"></div>
-    
-    
-    
-   
-    
+
     <form>
         <input type=button button accesskey="&#13" value="Take Snap" onClick="take_snapshot()">
     </form>
-    
+
+    <script type="text/javascript">
+
+        var intervalId = window.setInterval(function () {
+            take_snapshot();
+        }, 5000);
+
+    </script>
 
     <script>
         document.getElementById("audio").style.display = "none";
