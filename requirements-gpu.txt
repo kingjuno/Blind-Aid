@@ -6,3 +6,9 @@ tqdm
 flask
 seaborn
 pillow
+
+base64
+gtts
+requests
+shlex
+
