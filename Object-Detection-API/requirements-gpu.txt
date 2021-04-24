@@ -1,0 +1,8 @@
+tensorflow-gpu
+numpy
+opencv-python
+lxml
+tqdm
+flask
+seaborn
+pillow
