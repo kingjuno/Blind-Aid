@@ -4,11 +4,20 @@ import shlex
 import os
 from gtts import gTTS
 from processor import converter
+import base64
+from PIL import Image
+from io import BytesIO
+
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=['GET','POST'])
 def audio():
+    if request.method == 'POST':
+        st=request.form['nm']
+        im = Image.open(BytesIO(base64.b64decode(st[23:])))
+        im.save('frontend/static/image.png', 'PNG')
+        return render_template('index.html')
     items=converter()
     if(len(items)>=2):
         items.insert(len(items)-1,'and')
@@ -24,4 +33,4 @@ def audio():
     
 
 if __name__ == "__main__":
-    app.run(debug=True,port=3000)
+    app.run(debug=True,port=3050)
