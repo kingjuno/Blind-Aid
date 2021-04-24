@@ -1,6 +1,58 @@
 <!DOCTYPE html>
 <html>
-<body>
-    <embed src="static/object.mp3" id="audio" autostart=false loop=false>
-</body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>B-aid</title>
+        <style type="text/css">
+            body { font-family: Helvetica, sans-serif; }
+            h2, h3 { margin-top:0; }
+            form { margin-top: 15px; }
+            form > input { margin-right: 40px; }
+            #results 
+            { 
+                float:right; margin:20px; background:#ccc;
+                height: 640; width:720;
+             }
+        </style>
+    </head>
+
+    <body>
+        <embed src="static/object.mp3" id="audio" autostart=false loop=false>
+            <div id="results">Your captured image will appear here</div>
+        
+        <div id="my_camera"></div>
+        
+        
+        <script type="text/javascript" src="./webcam.min.js"></script>
+        
+        
+        <script language="JavaScript">
+            Webcam.set({
+                width: 720,
+                height: 640,
+                image_format: 'jpeg',
+                jpeg_quality: 90
+            });
+            Webcam.attach( '#my_camera' );
+        </script>
+        
+        
+        <form>
+            <input type=button button accesskey="&#13" value="Take Snap" onClick="take_snapshot()">
+        </form>
+        
+        <!-- Code to handle taking the snapshot and displaying it locally -->
+        <script language="JavaScript">
+            function take_snapshot() {
+                // take snapshot and get image data
+                Webcam.snap( function(data_uri) {
+                    // display results in page
+                    document.getElementById('results').innerHTML = 
+                        '<h2>Here is your image:</h2>' + 
+                        '<img src="'+data_uri+'"/>';
+                } );
+            }
+        </script>
+        
+    </body>
 </html>
