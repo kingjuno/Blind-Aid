@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 import requests
 import shlex
 import os
+from gtts import gTTS
 
 # import request
 app = Flask(__name__)
@@ -9,7 +10,11 @@ app = Flask(__name__)
 
 @app.route('/audio')
 def audio():
-    return 'audio'
+    items=['hello', 'world','dog','cat']
+    tts = gTTS('detected objects are :'+ ','.join(items),slow=True)
+    tts.save(f'frontend/static/object.mp3')
+    while 1:
+        return render_template('index.html',items=items)
 
 @app.route('/')
 def index():
