@@ -3,25 +3,25 @@ import requests
 import shlex
 import os
 from gtts import gTTS
-
-# import request
+from processor import converter
 app = Flask(__name__)
 
 
-@app.route('/audio')
+@app.route('/')
 def audio():
-    items=['hello', 'world','dog','cat']
-    tts = gTTS('detected objects are :'+ ','.join(items),slow=True)
+    items=converter()
+    if(len(items)>=2):
+        items.insert(len(items)-1,'and')
+    print(items)
+    if items:
+        tts = gTTS('detected objects are :'+ ','.join(items),slow=True)
+    else:
+        tts = gTTS('Nothing is detected')
+        
     tts.save(f'frontend/static/object.mp3')
     while 1:
-        return render_template('index.html',items=items)
-
-@app.route('/')
-def index():
-    cmd = '''curl.exe -X POST -F images=@./frontend/meme.jpg "http://localhost:5000/detections"'''
-    stream = os.popen(cmd)
-    output = stream.read()
-    return output or 'hi'
+        return render_template('index.html')
+    
 
 if __name__ == "__main__":
     app.run(debug=True,port=3000)
