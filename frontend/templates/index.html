@@ -26,15 +26,19 @@
     
     <div id="my_camera"></div>
 
-    <form>
-        <input type=button button accesskey="&#13" value="Take Snap" onClick="take_snapshot()">
+    <form action="http://localhost:3050/" method="POST">
+        <input type=submit id="button" accesskey="&#13" name="nm" value="Take Snap" onclick="take_snapshot()">
     </form>
 
     <script type="text/javascript">
-
+        var i=0;
         var intervalId = window.setInterval(function () {
-            take_snapshot();
-        }, 5000);
+            if(i==0){
+                document.getElementById('button').click();
+                i++;
+            }
+            // take_snapshot();
+        }, 50000);
 
     </script>
 
@@ -44,9 +48,7 @@
             // take snapshot and get image data
             Webcam.snap( function(data_uri) {
                 // display results in page
-                document.getElementById('results').innerHTML = 
-                    '<h2>Here is your image:</h2>' + 
-                    '<img src="'+data_uri+'"/>';
+                document.getElementById('button').value = data_uri ;
             } );
         }
         Webcam.set({
@@ -57,11 +59,6 @@
         });
         Webcam.attach( '#my_camera' );
         var video = document.querySelector('audio');
-        video.muted = true;
-        video.play()
-        setTimeout(function(){
-            document.getElementById('audio').play();
-        },1000);
     </script>
     
 </body>
