@@ -17,11 +17,21 @@ def audio():
         st=request.form['nm']
         im = Image.open(BytesIO(base64.b64decode(st[23:])))
         im.save('frontend/static/image.png', 'PNG')
+        items=converter()
+        print(items)
+        if(len(items)>=2):
+            items.insert(len(items)-1,'and')
+        if items:
+            tts = gTTS('detected objects are :'+ ','.join(items),slow=True)
+        else:
+            tts = gTTS('Nothing is detected')
+            
+        tts.save(f'frontend/static/object.mp3')
         return render_template('index.html')
     items=converter()
+    print(items)
     if(len(items)>=2):
         items.insert(len(items)-1,'and')
-    print(items)
     if items:
         tts = gTTS('detected objects are :'+ ','.join(items),slow=True)
     else:
@@ -33,4 +43,4 @@ def audio():
     
 
 if __name__ == "__main__":
-    app.run(debug=True,port=3050)
+    app.run(debug=False,port=3050)
