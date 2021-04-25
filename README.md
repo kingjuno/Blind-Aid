@@ -1,8 +1,7 @@
 # Blind-Aid
-![](https://github.com/kingjuno/Blind-Aid/blob/master/assets/stack.jpg)
-![](https://github.com/kingjuno/Blind-Aid/blob/master/assets/home.png)
-![](https://github.com/kingjuno/Blind-Aid/blob/master/assets/about.png)
+
 ## How it Works
+![](https://github.com/kingjuno/Blind-Aid/blob/master/assets/stack.jpg)
 ![](https://github.com/kingjuno/Blind-Aid/blob/master/assets/process.jpg)
 
 ## Installation
@@ -80,10 +79,14 @@ python frontend/app.py
 ```
 
 Boom! You are ready to go!
-
+## Images
+![](https://github.com/kingjuno/Blind-Aid/blob/master/assets/home.png)
+<br>
+![](https://github.com/kingjuno/Blind-Aid/blob/master/assets/about.png)
 ## Techstack
 
  1. Tensorflow
  2. OpenCV
  3. gTTS
  4. Flask
+
