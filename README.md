@@ -1,5 +1,7 @@
 # Blind-Aid
 ![](https://github.com/kingjuno/Blind-Aid/blob/master/assets/stack.jpg)
+![](https://github.com/kingjuno/Blind-Aid/blob/master/assets/home.png)
+![](https://github.com/kingjuno/Blind-Aid/blob/master/assets/about.png)
 ## How it Works
 ![](https://github.com/kingjuno/Blind-Aid/blob/master/assets/process.jpg)
 
