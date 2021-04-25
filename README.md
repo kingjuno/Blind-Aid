@@ -81,7 +81,8 @@ python frontend/app.py
 Boom! You are ready to go!
 ## Images
 ![](https://github.com/kingjuno/Blind-Aid/blob/master/assets/home.png)
-<br>
+<br/>
+<br/>
 ![](https://github.com/kingjuno/Blind-Aid/blob/master/assets/about.png)
 ## Techstack
 
@@ -90,3 +91,4 @@ Boom! You are ready to go!
  3. gTTS
  4. Flask
 
+Live Working Demo : [Click Me](https://github.com/kingjuno/Blind-Aid/blob/master/assets/Blind-Aid.mp4)
