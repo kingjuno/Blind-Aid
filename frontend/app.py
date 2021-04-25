@@ -43,4 +43,4 @@ def audio():
     
 
 if __name__ == "__main__":
-    app.run(debug=False,port=3050)
+    app.run(debug=True,port=3050)

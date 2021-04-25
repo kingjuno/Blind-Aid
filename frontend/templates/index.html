@@ -2,34 +2,54 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>B-aid</title>
     <style type="text/css">
-        body { font-family: Helvetica, sans-serif; }
+        body
+        { 
+            font-family: Helvetica, sans-serif;
+            background-image: url('./static/bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
         h2, h3 { margin-top:0; }
         form { margin-top: 15px; }
         form > input { margin-right: 40px; }
-        #results 
-        { 
-            float:right; margin:20px; background:#ccc;
-            height: 640; width:720;
-            }
         #my_camera{
-            align-items: center;
+            position:absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            /* width: 1000px;
+            height:1000px; */
         }
     </style>
     <script type="text/javascript" src="../static/webcam.min.js"></script>
 </head>
 
 <body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Blind-Aid</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+          </ul>
+        </div>
+      </nav>
     <embed src="static/object.mp3" id="audio" autostart=false loop=false autoplay muted>
-    <div id="results">Your captured image will appear here</div>
+    
     
     <div id="my_camera"></div>
 
     <form action="http://localhost:3050/" method="POST">
         <input type=submit id="button" accesskey="&#13" name="nm" value="Take Snap" onclick="take_snapshot()">
     </form>
-
+    <script>document.getElementById("button").style.display = "none";</script>
     <script type="text/javascript">
         var i=0;
         var intervalId = window.setInterval(function () {
@@ -60,6 +80,18 @@
         Webcam.attach( '#my_camera' );
         var video = document.querySelector('audio');
     </script>
+
     
+        <footer class="bg-dark text-center text-white" style="position: absolute;top:95%;left:50%;transform: translate(-50%,-50%);">
+        
+            <div class="container p-4">
+            <!-- Copyright -->
+            <div class="text-center p-3" style="color:white;">
+            © 2021 Copyright:
+            <a class="text-white" style="color:white;"href="https://github.com/kingjuno/Blind-Aid">Blind-Aid</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+  
 </body>
 </html>
