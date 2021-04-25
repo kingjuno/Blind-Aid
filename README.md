@@ -1,4 +1,5 @@
 # Blind-Aid
+[Devpost Submission](https://devpost.com/software/blind-aid)
 
 ## How it Works
 ![](https://github.com/kingjuno/Blind-Aid/blob/master/assets/stack.jpg)
@@ -91,4 +92,4 @@ Boom! You are ready to go!
  3. gTTS
  4. Flask
 
-Live Working Demo : [Click Me](https://github.com/kingjuno/Blind-Aid/blob/master/assets/Blind-Aid.mp4)
+Live Working Demo : [Click Me](https://youtu.be/yHlcjnnz6mo)
