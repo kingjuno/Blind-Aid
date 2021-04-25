@@ -3,7 +3,7 @@
 ## How it Works
 ![](https://github.com/kingjuno/Blind-Aid/blob/master/assets/process.jpg)
 
-## How to run
+## Installation
 1. Clone the repository.
 2. Navigate to Open-Detection-API directory.
 3. Install [Anaconda Navigator](https://www.anaconda.com/products/individual) and run the following commands in Anaconda Prompt.
