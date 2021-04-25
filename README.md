@@ -2,7 +2,6 @@
 [Devpost Submission](https://devpost.com/software/blind-aid)
 
 ## How it Works
-![](https://github.com/kingjuno/Blind-Aid/blob/master/assets/stack.jpg)
 ![](https://github.com/kingjuno/Blind-Aid/blob/master/assets/process.jpg)
 
 ## Installation
