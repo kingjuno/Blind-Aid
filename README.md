@@ -1,7 +1,7 @@
 # Blind-Aid
-![]('https://github.com/kingjuno/Blind-Aid/blob/master/assets/stack.jpg')
+![](https://github.com/kingjuno/Blind-Aid/blob/master/assets/stack.jpg)
 ## How it Works
-![]('https://github.com/kingjuno/Blind-Aid/blob/master/assets/process.jpg')
+![](https://github.com/kingjuno/Blind-Aid/blob/master/assets/process.jpg)
 
 ## How to run
 1. Clone the repository.
