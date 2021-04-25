@@ -5,13 +5,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>B-aid</title>
     <style type="text/css">
         body
@@ -27,14 +20,11 @@
         #my_camera{
             position:absolute;
             left: 50%;
-            top: 60%;
+            top: 50%;
             transform: translate(-50%, -50%);
             /* width: 1000px;
             height:1000px; */
         }
-        .container {
-    padding: 80px 120px;
-  }
     </style>
     <script type="text/javascript" src="../static/webcam.min.js"></script>
 </head>
@@ -43,7 +33,7 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">Blind-Aid</a>
+            <a class="navbar-brand" href="/">Blind-Aid</a>
           </div>
           <ul class="nav navbar-nav">
             <li class="active"><a href="/">Home</a></li>
@@ -56,21 +46,16 @@
     
     <div id="my_camera"></div>
 
-    <form action="http://localhost:3050/" method="POST">
+    <form action="http://localhost:3050/app" method="POST">
         <input type=submit id="button" accesskey="&#13" name="nm" value="Take Snap" onclick="take_snapshot()">
     </form>
-    <div id="Description" class="container text-center">
-        <h2>Blind-Aid</h2>
-        <p>Blind-Aid is a web application that is used to convert objects that are detected from the camera to speech which enables blind and partially blind people to know about there surroundings.The application automatically detects the objects which is detected using the Object Detection API and finally these responses are converted to speech by means of the Google text to speech API. </p>
-
-      </div>
-    <footer class="bg-dark text-center text-white" style="position: absolute;top:90%;left:50%;transform: translate(-50%,-50%);">
+    <footer class="bg-dark text-center text-white" style="position: absolute;top:95%;left:50%;transform: translate(-50%,-50%);">
     
         <div class="container p-4">
         <!-- Copyright -->
         <div class="text-center p-3" style="color:rgb(0, 0, 0);">
         © 2021 Copyright:
-        <a class="text-black" style="color:rgb(7, 7, 7);"href="https://github.com/kingjuno/Blind-Aid">Blind-Aid</a>
+        <a class="text-white" style="color:rgb(5, 5, 5);"href="https://github.com/kingjuno/Blind-Aid">Blind-Aid</a>
         </div>
         <!-- Copyright -->
     </footer>

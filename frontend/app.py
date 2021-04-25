@@ -11,7 +11,7 @@ from io import BytesIO
 app = Flask(__name__)
 
 
-@app.route('/', methods=['GET','POST'])
+@app.route('/app', methods=['GET','POST'])
 def audio():
     if request.method == 'POST':
         st=request.form['nm']
@@ -44,5 +44,9 @@ def audio():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+@app.route('/')
+def home():
+    return render_template('blind-aid.html')
 if __name__ == "__main__":
     app.run(debug=True,port=3050)
